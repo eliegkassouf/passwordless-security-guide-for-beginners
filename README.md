@@ -7,6 +7,7 @@
   - I've seen a lot of terrible implementations of "security" and how people handle data carelessly.
   - Security is a very large concern now a days and everyone needs to feel safe and understand that you cannot be easily breached.
 - ‼️ I will add code examples eventually when I'm not very busy.
+- ⚠️ Please do not copy and paste. Please reference this url. I will make sure to update over time.
 
 
 ## Contents
