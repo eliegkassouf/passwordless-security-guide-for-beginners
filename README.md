@@ -1,4 +1,4 @@
-# Elie's Passwordless/Security Guide for Beginners
+# Elie's Passwordless & Security Guide for Beginners
 
 ## Intro
 - ℹ️ It's 4AM where I'm located. I'm taking a little break from work to write this.
