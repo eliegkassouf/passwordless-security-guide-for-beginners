@@ -7,7 +7,7 @@
   - I've seen a lot of terrible implementations of "security" and how people handle data carelessly.
   - Security is a very large concern now a days and everyone needs to feel safe and understand that you cannot be easily breached.
 - ‼️ I will add code examples eventually when I'm not very busy.
-- ⚠️ Please do not copy and paste. Please reference this url. I will make sure to update over time.
+-  ⚠️ Please do not copy and paste. Please reference this url. I will make sure to update over time.
 
 
 ## Contents
@@ -15,9 +15,9 @@
 - [OAUTH2](#oauth2)
 - [I Need A Username Field / I Already Have One](#i-need-a-username-field--i-already-have-one)
 - [2FA](#2fa)
-- [Recaptcha](#recaptcha)
+- [reCaptcha](#recaptcha)
 - [Application Validation](#application-validation)
-- [Device/IP Validatidation](#deviceip-validatidation)
+- [Device/IP Validation](#deviceip-validation)
 - [Rate Limiting](#rate-limiting)
 - [Resetting Tokens Periodically](#resetting-tokens-periodically)
 - [Third Party Firewall and Services](#third-party-firewall-and-services)
@@ -50,7 +50,7 @@
 - You may ask or argue that the user is not going to login to their email every time and thats a fair assumption. 
 - We can simplify this daunting task by allowing users to login/register with a *Phone Number*.  
 - Why Phone Numbers? Safari, iOS and Android allow you to seamlessly paste the security code without having to navigate away. 
-- Twilio/SendGrid combination is perfect. If you're deadset on writing the logic yourself, please be careful (not recommended).
+- Twilio/SendGrid combination is perfect. If you're dead set on writing the logic yourself, please be careful (not recommended).
 - Phone Numbers allow you to get *personal* with your users and if you use this feature correctly you can increase traffic. 
 - ‼️ Please don't send useless notifications via SMS/Call. You will get blocked! *It's <b>very</b> important we don't annoy our users because we want them to respond quickly when security issues or very important notifications need to be actioned*.
 
@@ -62,8 +62,8 @@
 - The ability to allow users to change/update or add multiple 2FA methods. - It happens, people lose access to primary devices.
 
 
-## Recaptcha 
-- Throwing an invisble reCaptcha box will not hurt to increase security. 
+## reCaptcha 
+- Throwing an invisible reCaptcha box will not hurt to increase security. 
 - Again we don't want to annoy our users with this feature. 
 - Recommended for Registration/Login.
 
@@ -73,7 +73,7 @@
 - _//Todo: Add code examples for app validation
 
 
-## Device/IP Validatidation
+## Device/IP Validation
 - We can block out a lot of attacks/unwanted visitors by using services like IP Data Co, IPify to validate the users inital request to our service and monitoring it throughout the session.
 - You can make up your own rules easily and stop users on certain devices, from certain regions and check for VPN status as well as threat level.
 
@@ -84,20 +84,20 @@
 
 
 ## Resetting Tokens Periodically
-- Tokens are how users can identify themselves with your backend services. You can pair tokens with Recaptcha, Device/IP Valitation, App Validation and Rate Limiting to make it even harder for bad actors to attack backend services. 
+- Tokens are how users can identify themselves with your backend services. You can pair tokens with reCaptcha, Device/IP Validation, App Validation and Rate Limiting to make it even harder for bad actors to attack backend services. 
 - To increase the difficulty we can reset the token and re-validate as often as every 5 mins. Make sure this process is seamless, and only re-prompt validation if you really need to. 
-- No one wants to re-enter a password every 5 mins but we need to make sure we're covering all of our bases. We can combine all the methods above to comeup with an acurate prediction.
+- No one wants to re-enter a password every 5 mins but we need to make sure we're covering all of our bases. We can combine all the methods above to come up with an accurate prediction.
 
 
 ## Third Party Firewall and Services
-- Third party services like CloudFlare and Heroku Addons are great!
+- Third party services like CloudFlare and Heroku Add-ons are great!
 - They allow you to seamlessly add more layers and they will handle most of the heavy lifting for you. 
 - Not everyone can afford to go down this route but if you can afford it, I highly recommend it!
 
 
 ## Encrypt LocalStorage
 - I've seen too many sites with raw data just sitting there for the taking.
-- This data is accesbile from other windows and vulnerable to XSS attacks. 
+- This data is accessible from other windows and vulnerable to XSS attacks. 
 - Encrypt using AES (in production). 
 - Don't store sensitive data here even if encrypted.
 
