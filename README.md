@@ -1,8 +1,7 @@
 # Elie's Passwordless & Security Guide for Beginners
 
+
 ## Intro
-- ℹ️ It's 4AM where I'm located. I'm taking a little break from work to write this.
-- ✳️ I will revise this at a later time and update any discrepancies. 
 - ❓ Why am I writing this?
   - I've seen a lot of terrible implementations of "security" and how people handle data carelessly.
   - Security is a very large concern now a days and everyone needs to feel safe and understand that you cannot be easily breached.
@@ -22,6 +21,7 @@
 - [Resetting Tokens Periodically](#resetting-tokens-periodically)
 - [Third Party Firewall and Services](#third-party-firewall-and-services)
 - [Encrypt LocalStorage](#encrypt-localstorage)
+- [Encrypting Request Data](#encrypting-request-data)
 - [AWS Security Groups](#aws-security-groups)
 - [Other Notes](#other-notes)
 
@@ -70,6 +70,7 @@
 
 ## Application Validation
 - If you don't expect anyone else to connect to your backend services, we can add a layer of security here by only allowing the backend to communicate with *authorized* apps only and blocking everything else right off the bat. There are several ways to handle this.
+- CORS is key in this scenario but if you care about verifying the application itself instead of the request we can write a litte code to achieve this.
 - _//Todo: Add code examples for app validation
 
 
@@ -102,9 +103,17 @@
 - Don't store sensitive data here even if encrypted.
 
 
+## Encrypting Request Data
+- Make sure HTTPS is always available for your users. Recommended for most people!
+- If you are handling very sensitive information, we can encrypt all the data in the request (custom data only, you can't encrypt standard/required headers). 
+- We can achieve this by encrypting the data within the request and using UUID/custom header keys (that you can update over time).
+- This is not recommended because it makes testing/debugging difficult. Most people do not require this and you will need to modify your backend to be able to intercept and read the header keys and to decrypt the request.
+
+
 ## AWS Security Groups
 - If you're using Amazon Web Services, make sure to limit production access by using security groups.
 - AWS can only do so much to protect you and it's up to you at the end of the day to setup these rules.
+
 
 ## Other Notes
 - If not already obvious, enable 2FA on all your dev services.
