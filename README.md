@@ -6,7 +6,7 @@
   - I've seen a lot of terrible implementations of "security" and how people handle data carelessly.
   - Security is a very large concern now a days and everyone needs to feel safe and understand that you cannot be easily breached.
 - ‼️ I will add code examples eventually when I'm not very busy.
--  ⚠️ It's easier to use third party services for auth but if you're daring, you can do it yourself. Storing passwords in plain text or base64 is a sin. SHA-256 is fair at best and [ByCrypt is alright](https://security.stackexchange.com/questions/4781/do-any-security-experts-recommend-bcrypt-for-password-storage). In my opinion; don't store passwords at all. You will save a lot of time and headaches. Using a Phone #/Email will notify the user right away and makes it harder for an attacker to stay quiet. 
+-  ⚠️ It's easier to use third party services for auth but if you're daring, you can do it yourself. Storing passwords in plain text or base64 is a sin. SHA-256 is fair at best and [bcrypt is ok](https://security.stackexchange.com/questions/4781/do-any-security-experts-recommend-bcrypt-for-password-storage). In my opinion; don't store passwords at all. You will save a lot of time and headaches. Using a Phone #/Email will notify the user right away and makes it harder for an attacker to stay quiet. 
 
 
 ## Contents
