@@ -70,7 +70,7 @@
 
 ## Application Validation
 - If you don't expect anyone else to connect to your backend services, we can add a layer of security here by only allowing the backend to communicate with *authorized* apps only and blocking everything else right off the bat. There are several ways to handle this.
-- CORS is key in this scenario but if you care about verifying the application itself instead of the request we can write a litte code to achieve this.
+- CORS is key in this scenario but if you care about verifying the application itself instead of the request we can write a litte code to achieve this (use with CORS. Always use CORS. Don't be silly.)
 - _//Todo: Add code examples for app validation
 
 
