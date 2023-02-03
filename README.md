@@ -41,6 +41,7 @@
 ## OAUTH2
 - Using OAUTH2 is a great way to get started!
 - Companies like *Apple*, *Google*.. have already invested lots of money into security. Let them handle the login/registration process and use the return token to retrieve the users email address.
+- OAUTH2 Basics, thanks to Ron. [Issue 1](https://github.com/eliegkassouf/passwordless-security-guide-for-beginners/issues/1)
  - _//Todo: Add code examples for oauth2_
 
 
